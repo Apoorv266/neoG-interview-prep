@@ -22,7 +22,10 @@ function changeHead(event) {
         }
     }
     else{
+        console.log("value", inputField.value)
         inputField.value = "enter valid string"
+        console.log("value", inputField.value)
+        console.log(inputField)
     }
 }
 
