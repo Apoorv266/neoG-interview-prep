@@ -5,7 +5,7 @@ const BASE_API_URL = "https://api.funtranslations.com/translate/minion.json"
 const postValue = BASE_API_URL+"?text=apoorv"
 
 
-function errorfunc() {
+function errorfunc(error) {
     outputDiv.innerText = error
 }
 
