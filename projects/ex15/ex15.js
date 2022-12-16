@@ -14,10 +14,10 @@ let obj2 = {
 
 function compAge(objone , objtwo) {
     if (objone.power > objtwo.power) {
-        return `${objone.name} has more age`
+        return `${objone.name} has more power`
     }
     else{
-        return `${objtwo.name} has more age`
+        return `${objtwo.name} has more power`
     }
 }
 
