@@ -11,7 +11,6 @@ for (let i = 0; i < str.length; i++) {
             isVowel = true
         } 
   }
-
   if (!isVowel) newStr += str[i]
 }
 console.log(newStr)
