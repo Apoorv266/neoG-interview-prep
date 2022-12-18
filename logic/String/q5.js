@@ -9,7 +9,7 @@ for (let i = 0; i < str.length; i++) {
     for (let k = 0; k < vowel.length; k++) {
         if (str[i] === vowel[k]){
             isVowel = true
-        }  a
+        }  
   }
   if (!isVowel) newStr += str[i]
 }
