@@ -8,7 +8,7 @@ function copyFunc(str1, str2) {
         let temp = str1
         str1 = str2 
         str2 = temp
-        console.log(str1, str2)
+        console.log(str1, str2 )
     }
 }
 
