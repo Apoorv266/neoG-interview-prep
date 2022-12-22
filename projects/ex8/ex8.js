@@ -12,5 +12,5 @@ function errorfunc(error) {
 function fetchFunc() {
     fetch(postValue).then(res => res.json()).then(response => outputDiv.innerText = response.contents.translated).catch(errorfunc)
 }
-
+s
 btnShowOutput.addEventListener("click", fetchFunc)
