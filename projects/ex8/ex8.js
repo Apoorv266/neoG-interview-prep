@@ -7,7 +7,7 @@ const postValue = BASE_API_URL+"?text=apoorv"
 
 function errorfunc(error) {
     outputDiv.innerText = error
-} A
+} 
 
 function fetchFunc() {
     fetch(postValue).then(res => res.json()).then(response => outputDiv.innerText = response.contents.translated).catch(errorfunc)
