@@ -1,6 +1,6 @@
 // A program that counts the value of each character and prints the most repeated character?
 
-let str = "hello"
+let str = "test"
 
 function charCountFunc(str) {
     let obj = {}
@@ -15,7 +15,17 @@ for (let i = 0; i < str.length ; i++) {
         }
     }
 }
-return obj
+let count = 0
+let value = ""
+for (const val in obj) {
+    if (obj[val] > count) {
+        count = obj[val]
+        value = val
+    }
+}
+console.log(obj)
+console.log(value, count)
+return value
 }
 
 console.log(charCountFunc(str))
