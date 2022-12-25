@@ -23,8 +23,6 @@ for (const val in obj) {
         value = val
     }
 }
-console.log(obj)
-console.log(value, count)
 return value
 }
 
