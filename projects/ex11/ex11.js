@@ -4,7 +4,7 @@ let outputBox = document.querySelector("#output")
 
 
 function checkFunc() {
-    if (passwordVal.value.length === 10) {
+    if (passwordVal.value.length >= 10) {
         outputBox.innerText = "Success"
         passwordVal.style.border = "2px solid green"
     }
