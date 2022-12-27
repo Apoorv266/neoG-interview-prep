@@ -4,14 +4,22 @@ let url = "https://jsonplaceholder.typicode.com/todos"
 
 
 function printResult(url) {
-    fetch(url).then(response => response.json()).then(response => displayOutput(response))
+    fetch(url).then(response => response.json()).then(response => {
+        displayOutput(response)
+    }
+    )
 }
 
 function displayOutput(response) {
     for (let i = 0; i < response.length; i++) {
         document.write(`${response[i].title}<br>`)
-        
+
     }
+
+    //or 
+    // response.map((item)=>{
+    //     document.write(`${item.title}<br>`)
+    // })
 }
 
 printResult(url)
