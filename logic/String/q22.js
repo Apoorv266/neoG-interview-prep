@@ -13,12 +13,11 @@ function containsSpecialChars(str) {
   return result;
 }
 
-console.log(containsSpecialChars('hello')); // 👉️ false
-console.log(containsSpecialChars('hello!')); // 👉️ true
+
 
 //or
 
-function containsSpecialChars(str) {
+function containsSpecialChars2(str) {
   const specialChars = `\`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`;
 
   const result = specialChars.split('').some(specialChar => { 
@@ -27,3 +26,6 @@ function containsSpecialChars(str) {
 
   return result;
 }
+
+console.log(containsSpecialChars('hello')); // 👉️ false
+console.log(containsSpecialChars2('hello!')); // 👉️ true
