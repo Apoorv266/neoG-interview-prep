@@ -9,24 +9,41 @@ let url = "https://source.unsplash.com/random"
 
 
 function test() {
-    let img= ""
+    let img = ""
     for (let i = 0; i < Number(imgNum.value); i++) {
-       let newImg = `<img src=${url}>`
+        let newImg = `<img src=${url}>`
         img += newImg
     }
     return img
 }
 
-function displayFunc() {
+
+// since JavaScript is single-threaded, the test function is blocking the event loop and not giving the browser a chance to render the gif.
+// used setTimeout to make the test function asynchronous and wrap that in a Promise so that the other assignments run after it completes.
+
+
+
+async function displayFunc() {
     loadImg.style.display = 'block';
-    new Promise(resolve => setTimeout(() => {
-        resolve(test())
-      }))
-      .then((result) => {
-        loadImg.style.display = "hidden" 
-        output.innerHTML = result;  
-      })
+    new Promise(function (myResolve) {
+
+        setTimeout(() => {
+            myResolve(test())
+        }, 500)
     
+    }).then((result) => {
+        loadImg.style.display = "hidden"
+        output.innerHTML = result;
+    })
+
+
+    // loadImg.style.display = 'block';
+    // let result = await new Promise((resolve, reject) => {
+    //   setTimeout(() => resolve(test()))
+    // })
+    // loadImg.style.display = "hidden"
+    // output.innerHTML = result; 
+
 
 }
 
