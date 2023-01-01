@@ -30,7 +30,7 @@ async function displayFunc() {
         setTimeout(() => {
             myResolve(test())
         }, 500)
-    
+
     }).then((result) => {
         loadImg.style.display = "hidden"
         output.innerHTML = result;
@@ -48,4 +48,8 @@ async function displayFunc() {
 }
 
 btn.addEventListener("click", displayFunc)
+
+
+
+
 
