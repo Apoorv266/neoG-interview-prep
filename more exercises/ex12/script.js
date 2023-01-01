@@ -53,3 +53,4 @@ btn.addEventListener("click", displayFunc)
 
 
 
+//reference = https://stackoverflow.com/questions/71943182/how-to-show-hide-animated-gif-during-the-execution-of-a-function
