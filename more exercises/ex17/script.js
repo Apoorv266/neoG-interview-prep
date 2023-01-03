@@ -4,17 +4,14 @@ let text = document.querySelector("#text")
 let start = document.querySelector("#start")
 let stop = document.querySelector("#stop")
 let output = document.querySelector("#output")
-let colors = ["red", "green", "orange", "yellow"]
+let colors = ["red", "green", "orange", "yellow", "pink", "blue"]
 let count = -1
-let stopFunc = false
+let myInterval
+
 
 function startFunc() {
     output.innerText = text.value
-    let myInterval = setInterval(intervalFunc, 500);
-    if (stopFunc) {
-        clearInterval(myInterval);
-    }
-
+    myInterval = setInterval(intervalFunc, 1000);
 }
 
 function intervalFunc() {
@@ -23,12 +20,12 @@ function intervalFunc() {
         count = 0
     }
     output.style.color = `${colors[count]}`
+    
 }
 
 
 function endFunc() {
-    stopFunc = true
-    // console.log("test")
+    clearInterval(myInterval)
 }
 
 
